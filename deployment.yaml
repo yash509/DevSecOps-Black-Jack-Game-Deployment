@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pe-wa-deployment
+  name: blackjack-deployment
 spec:
   replicas: 6  # Number of desired replicas
   selector:
     matchLabels:
-      app: pe-wa
+      app: blackjack
   template:
     metadata:
       labels:
-        app: pe-wa
+        app: blackjack
     spec:
       containers:
-      - name: pe-wa
-        image: yash5090/pe-wa:latest
+      - name: blackjack
+        image: yash5090/blackjack:latest
         ports:
         - containerPort: 5000
